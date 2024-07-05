@@ -1,0 +1,3 @@
+enum GuitarType {
+    ACOUSTIC, ELECTRIC, CLASSICAL
+}

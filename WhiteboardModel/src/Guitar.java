@@ -4,10 +4,10 @@
 class Guitar {
     // properties or attributes, we call them "instance variables" or "fields"
     private String brand;
-    private String type;      // constraint: ["acoustic", "electric", "classical"]
+    private GuitarType type;  // enum type:  ACOUSTIC, ELECTRIC, CLASSICAL
     private int strings = 6;  // constraint: 6, 12 (default 6)
 
-    // constructors - these get called when the client says "new"
+    // constructors
     public Guitar() {
     }
 
@@ -15,12 +15,12 @@ class Guitar {
         setBrand(brand);
     }
 
-    public Guitar(String brand, String type) {
-        this(brand);    // delegate to ctor above me for brand
-        setType(type);  // handle type myself, be delegating to its setter
+    public Guitar(String brand, GuitarType type) {
+        this(brand);
+        setType(type);
     }
 
-    public Guitar(String brand, String type, int strings) {
+    public Guitar(String brand, GuitarType type, int strings) {
         this(brand, type);
         setStrings(strings);
     }
@@ -47,11 +47,11 @@ class Guitar {
         this.brand = brand;
     }
 
-    public String getType() {
+    public GuitarType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(GuitarType type) {
         this.type = type;
     }
 
