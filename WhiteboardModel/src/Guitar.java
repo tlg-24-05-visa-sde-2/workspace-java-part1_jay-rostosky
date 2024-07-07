@@ -4,7 +4,7 @@
 class Guitar {
     // properties or attributes, we call them "instance variables" or "fields"
     private String brand;
-    private GuitarType type;  // enum type:  ACOUSTIC, ELECTRIC, CLASSICAL
+    private GuitarType type;
     private int strings = 6;  // constraint: 6, 12 (default 6)
 
     // constructors
@@ -31,7 +31,7 @@ class Guitar {
     }
 
     public void tune() {
-        System.out.println("Tuning your " + getBrand() + " " + getStrings() + "-string " + getType() + " guitar");
+        System.out.println("Tuning your " + getBrand() + " " + getStrings() + "-string " + getType().display() + " guitar");
     }
 
     public void play(String song) {

@@ -13,13 +13,16 @@ class GuitarClient {
         g1.changeStrings();
         g1.tune();
         g1.play("Owner of a Lonely Heart");
-        System.out.println();
+
+        System.out.println();  // blank line, for better readability in the output
 
         // create another instance via the 3-arg constructor
         Guitar g2 = new Guitar("Gibson", GuitarType.ACOUSTIC, 12);
+
         g2.changeStrings();
         g2.tune();
         g2.play("Stairway to Heaven");
+
         System.out.println();
 
         // show their toString() methods in action
