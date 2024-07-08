@@ -11,5 +11,10 @@ class CalculatorClient {
         System.out.println();
 
         System.out.println("winner is: " + Calculator.randomInt(5, 16));  // "min-max" version
+
+        System.out.println();
+
+        System.out.println("average is: " + Calculator.average(3, 4, 9, 2, 3));  // convenient!
+        System.out.println("average of a single number 12 is: " + Calculator.average(12));
     }
 }
