@@ -1,3 +1,5 @@
+package edu.math;
+
 class CalculatorClient {
 
     public static void main(String[] args) {

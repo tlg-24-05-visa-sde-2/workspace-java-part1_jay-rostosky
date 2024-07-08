@@ -1,3 +1,5 @@
+package org.snooze;
+
 /*
  * Client-side main-class focused only on testing setSnoozeInterval().
 

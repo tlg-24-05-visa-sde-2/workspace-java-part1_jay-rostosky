@@ -1,3 +1,5 @@
+package edu.tests;
+
 class WrappersTest {
 
     public static void main(String[] args) {

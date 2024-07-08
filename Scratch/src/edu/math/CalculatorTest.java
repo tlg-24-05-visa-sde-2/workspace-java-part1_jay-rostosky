@@ -1,3 +1,5 @@
+package edu.math;
+
 class CalculatorTest {
 
     public static void main(String[] args) {

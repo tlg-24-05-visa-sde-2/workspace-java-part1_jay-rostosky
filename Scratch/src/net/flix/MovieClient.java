@@ -1,3 +1,5 @@
+package net.flix;
+
 class MovieClient {
 
     public static void main(String[] args) {
