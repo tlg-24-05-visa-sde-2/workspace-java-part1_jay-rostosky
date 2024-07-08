@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * Application or system class to model the workings of a television.
  * It has properties/attributes, it has business methods, but NO main() method.
@@ -7,11 +9,29 @@ class Television {
     public static final int MIN_VOLUME = 0;
     public static final int MAX_VOLUME = 100;
 
+    // disclaimer: the proper way would be to use a Brand enum
+    // we will do it this way for the labs, just for more practice with arrays and loops
+    public static final String[] VALID_BRANDS = { "Samsung", "LG", "Sony", "Toshiba" };
+
     private static int instanceCount = 0;
 
     // this method is also "up there" in the "shared zone," it does not execute inside a Television object
     public static int getInstanceCount() {
         return instanceCount;
+    }
+
+    // Recall: all static methods are called as Television.methodName()
+    // in this case, that means Television.isValidBrand()
+    public static boolean isValidBrand(String brand) {
+        boolean valid = false;
+
+        for (String currentBrand : VALID_BRANDS) {
+            if (currentBrand.equals(brand)) {  // we have a match!
+                valid = true;
+                break;                         // no need to keep looking
+            }
+        }
+        return valid;
     }
 
     // ----------------------------------------
@@ -72,31 +92,17 @@ class Television {
         return brand;
     }
 
+    // disclaimer: the proper way would be to use a Brand enum
+    // we will do it this way for the labs, just for more practice with arrays and loops
+    // VALID_BRANDS contains ["Samsung", "LG", "Sony", "Toshiba"]
     public void setBrand(String brand) {
-        switch (brand) {
-            case "Samsung":
-            case "LG":
-            case "Sony":
-            case "Toshiba":
-                this.brand = brand;
-                break;
-            default:
-                System.out.println("Invalid brand: " + brand + "." +
-                        " Valid brands are: Samsung, LG, Sony, Toshiba.");
-        }
-
-        /*
-        if (brand.equals("Samsung") ||
-            brand.equals("LG")      ||
-            brand.equals("Sony")    ||
-            brand.equals("Toshiba")) {
+        if (isValidBrand(brand)) {
             this.brand = brand;
         }
         else {
-            System.out.println("Invalid brand: " + brand + "." +
-                    " Valid brands are: Samsung, LG, Sony, Toshiba.");
+            System.out.printf("Invalid brand: %s. Valid brands are: %s.\n",
+                    brand, Arrays.toString(VALID_BRANDS));
         }
-        */
     }
 
     public int getVolume() {

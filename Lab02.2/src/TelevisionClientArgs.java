@@ -27,7 +27,7 @@ class TelevisionClientArgs {
             String example = "Example: java TelevisionClientArgs Samsung 32 PLASMA";
             String note1 = "Note 1: Supported displays are " + Arrays.toString(DisplayType.values());
             String note2 = "Note 2: Volume must be between " + Television.MIN_VOLUME + " and " + Television.MAX_VOLUME;
-            String note3 = "Note 3: Brand must be Sony, Samsung, LG, Toshiba";
+            String note3 = "Note 3: Supported brands are "   + Arrays.toString(Television.VALID_BRANDS);
             System.out.println(usage);
             System.out.println(example);
             System.out.println(note1);
