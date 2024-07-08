@@ -1,3 +1,7 @@
+package com.music.client;
+
+import com.music.Guitar;
+import com.music.GuitarType;
 import java.util.Arrays;
 
 /*

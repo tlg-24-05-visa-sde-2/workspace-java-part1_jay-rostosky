@@ -1,3 +1,8 @@
+package com.music.client;
+
+import com.music.Guitar;
+import com.music.GuitarType;
+
 /*
  * Client main-class for test-driving a few instances of Guitar.
  */

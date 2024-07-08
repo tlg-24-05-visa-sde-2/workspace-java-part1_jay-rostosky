@@ -1,7 +1,9 @@
+package com.music;
+
 /*
  * Business class for WhiteboardModel code review assignment.
  */
-class Guitar {
+public class Guitar {
     // properties or attributes, we call them "instance variables" or "fields"
     private String brand;
     private GuitarType type;

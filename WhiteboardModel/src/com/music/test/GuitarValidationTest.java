@@ -1,3 +1,7 @@
+package com.music.test;
+
+import com.music.Guitar;
+
 /*
  * main-class for testing correct functionality of setStrings().
  *  setStrings() will only accept 6 or 12.

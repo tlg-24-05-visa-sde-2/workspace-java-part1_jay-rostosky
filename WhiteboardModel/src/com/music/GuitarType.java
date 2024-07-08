@@ -1,4 +1,6 @@
-enum GuitarType {
+package com.music;
+
+public enum GuitarType {
     ACOUSTIC("acoustic"),
     ELECTRIC("electric"),
     CLASSICAL("classical");
