@@ -1,5 +1,5 @@
 package net.flix;
 
-enum Rating {
+public enum Rating {
     G, PG, PG_13, R, NC_17
 }

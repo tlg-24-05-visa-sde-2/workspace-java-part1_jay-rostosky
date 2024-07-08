@@ -1,6 +1,6 @@
 package net.flix;
 
-enum Genre {
+public enum Genre {
     ANIME("Anime"),        // each of these is calling the Genre() ctor below
     DRAMA("Drama..."),
     HORROR("HORROR!!!"),
