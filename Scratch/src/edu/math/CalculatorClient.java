@@ -1,5 +1,7 @@
 package edu.math;
 
+import static edu.math.Calculator.*;  // OK to use wildcard (*) for static imports
+
 class CalculatorClient {
 
     public static void main(String[] args) {

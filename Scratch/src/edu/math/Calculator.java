@@ -1,5 +1,7 @@
 package edu.math;
 
+import static java.lang.Math.*;
+
 /*
  * This is an "all-static" class, i.e., it has nothing but static methods.
  */
