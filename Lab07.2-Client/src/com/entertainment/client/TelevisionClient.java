@@ -10,7 +10,7 @@ package com.entertainment.client;
 
 import com.entertainment.DisplayType;
 import com.entertainment.Television;
-import com.entertainment.util.Useful;
+// import com.entertainment.util.Useful;
 
 /**
  * Tester class, or "client" class, with main().
@@ -22,7 +22,7 @@ class TelevisionClient {
     // ENTRY-POINT or starting point for a standalone Java application
     public static void main(String[] args) {
         // Useful is a public class in another package - good, because I need to use it here
-        Useful.help();
+        // Useful.help();
 
         System.out.println(Television.getInstanceCount() + " instances created");
         System.out.println();
