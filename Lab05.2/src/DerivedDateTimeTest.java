@@ -17,6 +17,8 @@ import java.time.format.*;
 import java.time.temporal.TemporalAdjusters;
 import static java.time.temporal.TemporalAdjusters.*;
 
+import static java.time.DayOfWeek.*;  // you can now say MONDAY instead of DayOfWeek.MONDAY
+
 class DerivedDateTimeTest {
 
     /**
@@ -86,7 +88,7 @@ class DerivedDateTimeTest {
      */
     public static void testLaborDay() {
         LocalDate sept1 = LocalDate.of(1966, 9, 1);
-        LocalDate laborDay = sept1.with(TemporalAdjusters.nextOrSame(DayOfWeek.MONDAY));
+        LocalDate laborDay = sept1.with(nextOrSame(MONDAY));
         System.out.println(laborDay);
     }
 
@@ -99,7 +101,7 @@ class DerivedDateTimeTest {
      */
     public static void testElectionDay() {
         LocalDate nov1 = LocalDate.of(2024, 11, 1);
-        LocalDate election = nov1.with(TemporalAdjusters.nextOrSame(DayOfWeek.MONDAY)).plusDays(1);
+        LocalDate election = nov1.with(nextOrSame(MONDAY)).plusDays(1);
         System.out.println(election);
         System.out.println(election.getDayOfWeek());
     }
