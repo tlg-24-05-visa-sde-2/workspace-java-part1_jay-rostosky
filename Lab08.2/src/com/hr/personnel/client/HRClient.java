@@ -25,8 +25,8 @@ class HRClient {
         System.out.println(dept);
 
         // add Employees to it
-        dept.addEmployee(new Employee("Jason",         LocalDate.of(1990, 8, 24)));
-        dept.addEmployee(new Employee("Julie",         LocalDate.of(2000, 2, 2)));
+        dept.addEmployee(new SalariedEmployee("Jason", LocalDate.of(1990, 8, 24), 1250.0));
+        dept.addEmployee(new HourlyEmployee("Julie",   LocalDate.of(2000, 2, 2), 50.0, 40.0));
         dept.addEmployee(new SalariedEmployee("Logan", LocalDate.of(2014, 2, 6), 1500.0));
         dept.addEmployee(new HourlyEmployee("Amilia",  LocalDate.of(2020, 2, 2), 27.5, 35.0));
 
@@ -37,5 +37,13 @@ class HRClient {
         // make its Employees work
         System.out.println("\nMake employees work:");
         dept.workEmployees();
+
+        // pay all Employees
+        System.out.println("\nPay all employees:");
+        dept.payEmployees();
+
+        // forced holiday break
+        System.out.println("\nHoliday break:");
+        dept.holidayBreak();
     }
 }
