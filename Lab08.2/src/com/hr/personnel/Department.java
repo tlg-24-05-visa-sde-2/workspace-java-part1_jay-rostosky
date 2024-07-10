@@ -70,7 +70,7 @@ public class Department {
      */
     public void holidayBreak() {
         for (int i = 0; i < currentIndex; i++) {
-            if (employees[i] instanceof SalariedEmployee) {
+            if (employees[i] instanceof SalariedEmployee) {  // IS-A check
                 // "downcast" the Employee reference employees[i] to more specific type SE
                 // we need to do this in order to call SalariedEmployee-specific methods
 
