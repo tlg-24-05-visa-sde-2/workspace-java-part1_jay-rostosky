@@ -26,8 +26,9 @@ public class Department {
     // fields
     private String name;
     private String location;
-    private Employee[] employees = new Employee[100];
-    private int currentIndex = 0;  // for dealing with the array
+    // 1-to-many HAS-A relationship
+    private final Employee[] employees = new Employee[100];  // initially filled with nulls
+    private int currentIndex = 0;                            // for dealing with the array
 
     // constructors
     public Department() {
@@ -40,7 +41,8 @@ public class Department {
 
     // business methods
     public void listEmployees() {
-        // Note: we don't use for-each here because we only want to access the array where employees were added.
+        // Note: we don't use for-each here because we only want to access the array
+        // where employees were added, and we don't want to hit the slots with null in them.
         // Question: what is in the array for indices where no Employee was added?  null!
         for (int i = 0; i < currentIndex; i++) {
             System.out.println(employees[i]);  // toString() automatically called
