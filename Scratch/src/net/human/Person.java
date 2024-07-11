@@ -15,6 +15,7 @@ class Person {
     private final LocalDate birthDate;
 
     public Person(String name, LocalDate birthDate) {
+        super();
         this.name = name;
         this.birthDate = birthDate;
     }
@@ -23,8 +24,6 @@ class Person {
      * Returns the person's age in whole years.
      * This is the period of time between the birthdate and today's date.
      * This is a "derived" property, i.e., it is "calculated" from existing data, not a new field.
-     *
-     * CUSTOMER QUESTION; what do we return if this value is < 1? (e.g., 8 months)
      */
     public int age() {
         return Period.between(birthDate(), LocalDate.now()).getYears();
@@ -38,7 +37,9 @@ class Person {
         return birthDate;
     }
 
+    @Override
     public String toString() {
-        return String.format("Person: name=%s, birthDate=%s", name(), birthDate());
+        return String.format("%s: name=%s, birthDate=%s",
+                getClass().getSimpleName(), name(), birthDate());
     }
 }
