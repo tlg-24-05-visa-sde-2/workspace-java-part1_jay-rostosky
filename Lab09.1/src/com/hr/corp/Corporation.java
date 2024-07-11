@@ -25,6 +25,12 @@ public class Corporation implements TaxPayer {
         System.out.println(getName() + " paid no taxes - we lobbied hard and it worked");
     }
 
+    // I "opt-in" to provide a custom implementation of this contract method
+    @Override  // interface TaxPayer (default method)
+    public void fileReturn() {
+        System.out.println(getName() + " filed no return, we sent our lawyers instead");
+    }
+
     public String getName() {
         return name;
     }
