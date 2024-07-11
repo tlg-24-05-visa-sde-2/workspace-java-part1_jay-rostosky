@@ -17,10 +17,16 @@ public class Executive extends SalariedEmployee {
         super(name, hireDate, salary);
     }
 
-    // I "opt-in" to provide my own way of doing it, vs. the default way of doing it
+    // I "opt-in" to provide my own way of doing it, vs. the default way
     @Override  // interface TaxPayer (default method)
     public void fileReturn() {
         System.out.println("Return filed electronically");
+    }
+
+    // I "opt-in" to provide my own way of doing it, vs. the default way
+    @Override  // interface TaxPayer (default method)
+    public double getStandardDeduction() {
+        return 0.5 * getSalary();
     }
 
     // business methods
